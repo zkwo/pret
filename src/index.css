@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variabel Warna (Dark Mode Elegant) */
+:root {
+  --bg-color: #1a1a1a;       
+  --card-color: #242424;    
+  --font-color: #e0e0e0;     
+  --subtle-color: #888888;   
+  --accent-color: #00e5ff;   /* Cyan Elektrik */
+  --line-color: #444444;     
+  --font-main: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth; 
+}
+
+h1, h2, h3 { color: #ffffff; font-weight: 600; }
+a { color: var(--accent-color); text-decoration: none; transition: filter 0.3s ease; }
+a:hover { filter: brightness(0.8); }
+
+
+/* === Layout Utama === */
+.app-container {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 250px; /* Ruang untuk sidebar */
+  width: calc(100% - 250px);
+  min-height: 100vh;
+}
+
+/* === Kelas Active (penting untuk react-scroll) === */
+.is-active {
+  color: var(--accent-color) !important;
+}
+
+.is-active .station-dot-base {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 0 10px var(--accent-color) !important;
+}
+/* === Responsif Sederhana === */
+@media (max-width: 900px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    .navbar {
+        display: none !important; /* Di HP, kita sembunyikan navbar sidebar */
+    }
+}
