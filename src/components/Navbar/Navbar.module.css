@@ -1,0 +1,88 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; 
+  height: 100vh;
+  background-color: var(--card-color);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--line-color);
+  z-index: 100;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.logoAccent { 
+    color: var(--accent-color); 
+}
+
+.metroMap {
+  list-style: none;
+  position: relative;
+  flex-grow: 1; 
+  padding-left: 0;
+}
+
+.metroLine {
+  position: absolute;
+  left: 7px; 
+  top: 10px;
+  bottom: 10px;
+  width: 4px;
+  background-color: var(--line-color);
+  z-index: 1;
+}
+
+.station {
+  margin-bottom: 2.5rem; 
+  position: relative;
+  z-index: 2;
+}
+
+.stationLink {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--subtle-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.stationLink:hover {
+  color: var(--font-color);
+}
+
+.stationDot {
+  /* Class dasar yang akan di override oleh .is-active */
+  width: 18px;
+  height: 18px;
+  background-color: var(--bg-color);
+  border: 4px solid var(--line-color);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.stationLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; 
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--subtle-color);
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-color);
+}
